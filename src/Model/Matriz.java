@@ -27,6 +27,7 @@ public class Matriz {
         System.out.println(rta);
         int cont1 = 0;
         int col = 0;
+        int j2=0;
         for (int i = 0; i < matriz.length; i++)
         {
             cont1 = 0;
@@ -38,9 +39,19 @@ public class Matriz {
                     cont1++;
                     if(cont1 != 4)
                     {
-                        System.out.println("Se ha encontrado 4 coincidencias: fila--> " + (i+1) + ", columna--> " + col);
-                        cont1 = 0;
-                        col = 0;
+                        System.out.println("Se ha encontrado coincidencias: fila--> " + (i+1) + ", columna--> " + col);
+                        j2=cont1;
+                        if(j2>=a){
+                            System.out.println("cumple con las condiciones");
+                            cont1 = 0;
+                            col = 0;
+                        }else {
+                            System.out.println("no cumple con las condiones");
+                            //cont1 = 0;
+
+                        }
+
+
                     }
                 }
                 else
