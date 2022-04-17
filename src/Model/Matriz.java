@@ -25,5 +25,29 @@ public class Matriz {
             rta = rta + "\n";
         }
         System.out.println(rta);
+        int cont1 = 0;
+        int col = 0;
+        for (int i = 0; i < matriz.length; i++)
+        {
+            cont1 = 0;
+            for (int j = 0; j < matriz[i].length - 1; j++)
+            {
+
+                if (matriz[i][j] == matriz[i][j+1])
+                {
+                    cont1++;
+                    if(cont1 != 4)
+                    {
+                        System.out.println("Se ha encontrado 4 coincidencias: fila--> " + (i+1) + ", columna--> " + col);
+                        cont1 = 0;
+                        col = 0;
+                    }
+                }
+                else
+                {
+                    col = j+1;
+                }
+            }
+        }
     }
 }
