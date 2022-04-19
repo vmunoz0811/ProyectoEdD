@@ -33,7 +33,11 @@ public class Controller {
                         System.exit(0);
                     case 1:
                         System.out.println(ANSI_YELLOW + "Caso No." + j + ANSI_RESET);
-                        model.createMatrizRandom(x);
+                        if(model.validation(x)){
+                            view.showInfo("YES");
+                        }else{
+                            view.showInfo("NO");
+                        }
                         break;
                 }
                 j++;
